@@ -1,0 +1,91 @@
+/* Base */
+:root {
+  --bg: #f3fbff;
+  --card: #ffffff;
+  --accent: #ff8899;
+  --text: #111827;
+  --muted: #6b7280;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Poppins',Arial;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+.container{max-width:1100px;margin:0 auto;padding:20px}
+
+/* NAV */
+.navbar{background:#fff;border-bottom:1px solid rgba(0,0,0,0.04);position:sticky;top:0;z-index:20}
+.navbar .container{display:flex;align-items:center;justify-content:space-between;padding:12px 24px}
+.brand,.brand a{color:var(--accent);font-weight:700;font-size:20px;text-decoration:none}
+.nav a{margin:0 12px;color:var(--muted);text-decoration:none;font-weight:600}
+.nav a:hover{color:var(--accent);transition:color .25s}
+
+/* HERO */
+.hero{display:flex;align-items:center;justify-content:space-between;padding:60px 24px}
+.hero-left{max-width:55%}
+.greet{color:var(--muted);margin:0 0 6px}
+.title{font-size:48px;margin:0 0 6px}
+.name{color:var(--text)}
+.subtitle{color:var(--accent);margin:0 0 8px;font-weight:700}
+.location{color:var(--muted);margin:6px 0 18px}
+.cta{padding:12px 20px;background:var(--accent);border:none;color:#fff;border-radius:8px;cursor:pointer;font-weight:700;transition:transform .18s,box-shadow .18s}
+.cta:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,0,0,0.08)}
+
+/* right image & vertical label */
+.hero-right{position:relative;display:flex;align-items:center}
+.profile-photo{width:420px;height:auto;border-radius:12px;box-shadow:0 10px 30px rgba(2,6,23,0.08)}
+.vertical-text{position:absolute;right:-36px;top:10%;writing-mode:vertical-rl;color:rgba(0,0,0,0.06);font-size:64px}
+
+/* Sections */
+.section{padding:30px 24px;background:transparent;border-top:1px solid rgba(0,0,0,0.02)}
+h2{margin:0 0 14px}
+
+/* Skills */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.skill{background:var(--card);padding:12px;border-radius:10px;box-shadow:0 6px 18px rgba(2,6,23,0.04)}
+.skill-title{font-weight:700;margin-bottom:6px}
+.progress{width:100%;height:14px;background:#eef6fb;border-radius:10px;overflow:hidden}
+.progress-bar{width:0;height:100%;background:linear-gradient(90deg,var(--accent),#ff6b8a);transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+
+/* Projects */
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.project-card{background:var(--card);padding:18px;border-radius:12px;cursor:pointer;box-shadow:0 8px 24px rgba(2,6,23,0.04);transition:transform .18s,background .18s}
+.project-card:hover{transform:translateY(-8px);background:#fff6f8}
+
+/* Media */
+.media-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.media-item{background:var(--card);padding:12px;border-radius:8px;box-shadow:0 6px 18px rgba(2,6,23,0.04)}
+
+/* Slider */
+.slider{max-width:720px;margin:0 auto}
+.slides{position:relative;overflow:hidden;border-radius:10px;height:320px}
+.slide{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:none}
+.slide.active{display:block}
+.slider-controls{display:flex;gap:8px;justify-content:center;margin-top:10px}
+.btn-small{padding:8px 12px;border-radius:8px;border:none;background:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(2,6,23,0.04)}
+
+/* Contact form */
+#contactForm{max-width:720px;display:grid;gap:10px}
+label{font-weight:600}
+input,textarea{padding:10px;border-radius:8px;border:1px solid #e6eef7}
+.form-actions{display:flex;gap:10px}
+.btn-secondary{background:#f3f6f9;border:1px solid #e6eef7;padding:10px 14px;border-radius:8px;cursor:pointer}
+
+/* Back to top */
+#topBtn{position:fixed;right:18px;bottom:18px;padding:10px;border-radius:8px;border:none;background:#111;color:#fff;display:none;cursor:pointer}
+
+/* Footer */
+.footer{text-align:center;padding:20px;background:transparent;color:var(--muted)}
+
+/* Responsive (Step: mobile-friendly) */
+@media (max-width:900px){
+  .hero{flex-direction:column-reverse;gap:20px;padding:28px}
+  .hero-left{max-width:100%;text-align:center}
+  .profile-photo{width:320px}
+  .vertical-text{display:none}
+}
+@media (max-width:480px){
+  .title{font-size:28px}
+  .profile-photo{width:260px}
+  .navbar .container{padding:10px}
+}
+
+/* small nice transitions (challenge: CSS transitions for hover animations) */
+a,button,input,textarea{transition:all .18s ease}

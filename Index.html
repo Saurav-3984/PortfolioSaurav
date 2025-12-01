@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Saurav Basnet —RECk</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <div class="brand">cc:Saurav</div>
+      <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO like screenshot -->
+  <section class="hero">
+    <div class="hero-left">
+      <p class="greet">Hello,</p>
+      <h1 class="title">I'm <span class="name">Saurav Basnet</span></h1>
+      <p class="subtitle">Frontend Developer</p>
+      <p class="location">From Nepal</p>
+      <button id="nextPageBtn" class="cta">Next Page</button>
+    </div>
+    <div class="hero-right">
+      <img src="images/profile.png" alt="Profile photo" class="profile-photo">
+      <div class="vertical-text">Reck Block</div>
+    </div>
+  </section>
+
+  <!-- SKILLS (Step 1) -->
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill">
+        <div class="skill-title">HTML</div>
+        <div class="progress"><div class="progress-bar" data-width="90%"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-title">CSS</div>
+        <div class="progress"><div class="progress-bar" data-width="85%"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-title">JavaScript</div>
+        <div class="progress"><div class="progress-bar" data-width="75%"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-title">PHP</div>
+        <div class="progress"><div class="progress-bar" data-width="60%"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS (Step 3) -->
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <p class="note">(Click a card — JS opens live link)</p>
+    <div class="projects-grid">
+      <!-- Dummy rich projects -->
+      <div class="project-card" data-link="https://yourusername.github.io/craving-junction">
+        <h3>Craving Junction</h3><p>Food order app — PHP & MySQL</p>
+      </div>
+      <div class="project-card" data-link="https://yourusername.github.io/weather-app">
+        <h3>Weather App</h3><p>OpenWeatherMap API demo</p>
+      </div>
+      <div class="project-card" data-link="https://yourusername.github.io/portfolio-week1">
+        <h3>Portfolio Week 1</h3><p>Original static portfolio</p>
+      </div>
+      <div class="project-card" data-link="https://example.com">
+        <h3>Demo Project</h3><p>Sample animation & UI</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Media (Step 4) -->
+  <section id="media" class="section">
+    <h2>Media</h2>
+    <div class="media-grid">
+      <div class="media-item">
+        <h4>Video</h4>
+        <video controls width="320"><source src="images/thuglife.mp4" type="video/mp4">Your browser doesn't support video.</video>
+      </div>
+      <div class="media-item">
+        <h4>Audio</h4>
+        <audio controls><source src="images/thugnigga audio.mp3" type="audio/mpeg">Your browser doesn't support audio.</audio>
+      </div>
+      <div class="media-item">
+        <h4>Canvas</h4>
+        <canvas id="myCanvas" width="320" height="180"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slider (Step 5) -->
+  <section id="gallery" class="section">
+    <h2>Gallery</h2>
+    <div class="slider">
+      <div class="slides">
+        <img src="images/Screenshot 2025-12-01 202356.png" class="slide active" alt="Slide 1">
+        <img src="images/img.png" class="slide" alt="Slide 2">
+        <img src="images/project1.png" class="slide" alt="Slide 3">
+      </div>
+      <div class="slider-controls">
+        <button id="prevBtn" class="btn-small">Prev</button>
+        <button id="nextBtn" class="btn-small">Next</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT (Step 2) -->
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <form id="contactForm" novalidate>
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required aria-required="true">
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required aria-required="true">
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" maxlength="300" required aria-required="true"></textarea>
+
+      <div class="form-actions">
+        <button type="submit" class="cta">Submit</button>
+        <button type="reset" class="btn-secondary">Reset</button>
+      </div>
+      <p id="formStatus" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <button id="topBtn" title="Back to top">↑</button>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Saurav Basnet — All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

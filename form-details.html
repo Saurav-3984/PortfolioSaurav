@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Form Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container-center">
+    <h1>Submitted Details</h1>
+    <div id="output" class="details-box"></div>
+    <p><a href="index.html" class="btn-link">← Back to Home</a></p>
+  </main>
+
+  <script>
+    const out = document.getElementById('output');
+    const raw = localStorage.getItem('contactData');
+    if(!raw) {
+      out.innerHTML = '<p>No saved form data. Please submit the contact form first.</p>';
+    } else {
+      try {
+        const data = JSON.parse(raw);
+        out.innerHTML = `
+          <p><strong>Name:</strong> ${data.name}</p>
+          <p><strong>Email:</strong> ${data.email}</p>
+          <p><strong>Message:</strong> ${data.message}</p>
+          <p><strong>Submitted:</strong> ${new Date(data.submittedAt).toLocaleString()}</p>
+        `;
+      } catch(e) {
+        out.innerHTML = '<p>Unable to read stored data.</p>';
+      }
+    }
+  </script>
+</body>
+</html>
